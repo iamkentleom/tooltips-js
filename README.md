@@ -1,5 +1,5 @@
 # TooltipsJS
-TooltipJS is a javascript library for adding tooltips in your website. It is lightweight and easy to use.
+TooltipsJS is a javascript library for adding tooltips in your website. It is lightweight and easy to use.
 ## Add as npm module
 ```shell
 npm install tooltipsjs --save
