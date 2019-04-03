@@ -1,6 +1,6 @@
 {
   "name": "tooltipsjs",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "A javascript library for adding tooltips in your website",
   "main": "src/tooltipsjs.js",
   "scripts": {
