@@ -1,13 +1,14 @@
 {
-  "name": "tooltipsjs",
+  "name": "tooltips-js",
   "version": "1.0.1",
   "description": "A javascript library for adding tooltips in your website",
-  "main": "src/tooltipsjs.js",
+  "main": "src/tooltips-js.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "keywords": [
-    "tooltips",
+    "tooltips-js",
+    "tooltip",
     "javascript"
   ],
   "author": "Kent Leo L. Makibulan",
