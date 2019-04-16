@@ -4,18 +4,20 @@ window.onload = () => {
             this.element = element
             this.props = props
             const width = this.props.label.length
+            const identifier = Math.random().toString(36).substring(2, 6)
             let insert = 
-                `<span class = "label">${this.props.label}</span>
+                `<span class = "label-${identifier}">${this.props.label}</span>
                 <style>
                     .tooltip{
                         position: relative;
                         display: inline-block;
                     }
-                    .tooltip .label{
+                    .tooltip .label-${identifier}{
                         cursor: pointer;
                         visibility: hidden;
                         opacity: 0;
                         text-align: center;
+                        font-size: 10pt;
                         width: ${width}ex;
                         position: absolute;
                         background-color: #555;
@@ -23,12 +25,12 @@ window.onload = () => {
                         border-radius: 5px;
                         padding: 5px 8px;
                         left: 50%;
-                        ${this.props.position == 'top' ? 'bottom' : 'top'}: 150%;
+                        ${this.props.position == 'top' ? 'bottom' : 'top'}: 170%;
                         margin-left: -${width/2+1}ex;
                         transition: 0.3s;
                         z-index: 1000 !important;
                     }
-                    .tooltip .label::after{
+                    .tooltip .label-${identifier}::after{
                         content: "";
                         position: absolute;
                         ${this.props.position == 'top' ? 'bottom' : 'top'}: -50%;
@@ -39,14 +41,14 @@ window.onload = () => {
                         border-style: solid;
                         border-color: ${this.props.position == 'top' ? '#555' : 'transparent'} transparent ${this.props.position == 'top' ? 'transparent' : '#555'} transparent;
                     }
-                    .tooltip:hover > .label{
+                    .tooltip:hover > .label-${identifier}{
                         visibility: visible;
+                        ${this.props.position == 'top' ? 'bottom' : 'top'}: 150%;
                         opacity: 1;
                     }
                 </style>`
             this.element.insertAdjacentHTML("beforeend", insert)
             this.element.classList.add('tooltip')
-            // console.log('Success')
         }
     }
     
