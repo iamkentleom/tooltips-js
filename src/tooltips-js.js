@@ -4,6 +4,8 @@ window.onload = () => {
             this.element = element
             this.props = props
             const width = this.props.label.length
+            this.props.position = this.props.position ? this.props.position : 'top'
+            this.props.color = this.props.color ? this.props.color : '#444'
             const identifier = Math.random().toString(36).substring(2, 6)
             let insert = 
                 `<span class = "label-${identifier}">${this.props.label}</span>
@@ -20,10 +22,10 @@ window.onload = () => {
                         font-size: 10pt;
                         width: ${width}ex;
                         position: absolute;
-                        background-color: #555;
+                        background-color: ${this.props.color};
                         color: white;
-                        border-radius: 5px;
-                        padding: 5px 8px;
+                        border-radius: 3px;
+                        padding: 7px 10px;
                         left: 50%;
                         ${this.props.position == 'top' ? 'bottom' : 'top'}: 170%;
                         margin-left: -${width/2+1}ex;
@@ -35,11 +37,11 @@ window.onload = () => {
                         position: absolute;
                         ${this.props.position == 'top' ? 'bottom' : 'top'}: -50%;
                         left: 50%;
-                        margin-${this.props.position == 'top' ? 'bottom' : 'top'}: 3px;
-                        margin-left: -5px;
-                        border-width: 5px;
+                        margin-${this.props.position == 'top' ? 'bottom' : 'top'}: 0px;
+                        margin-left: -10px;
+                        border-width: 10px;
                         border-style: solid;
-                        border-color: ${this.props.position == 'top' ? '#555' : 'transparent'} transparent ${this.props.position == 'top' ? 'transparent' : '#555'} transparent;
+                        border-color: ${this.props.position == 'top' ? this.props.color : 'transparent'} transparent ${this.props.position == 'top' ? 'transparent' : this.props.color} transparent;
                     }
                     .tooltip:hover > .label-${identifier}{
                         visibility: visible;
@@ -50,12 +52,11 @@ window.onload = () => {
             this.element.insertAdjacentHTML("beforeend", insert)
             this.element.classList.add('tooltip')
         }
-    }
-    
+    } 
     // Usage Example
-    // new Tooltip(document.getElementById('tooltip'), {
+    // new Tooltip(document.getElementById('hello'), {
     //     label: "Click to copy",
-    //     position: "top"
+    //     position: "top",
+    //     color: "black"
     // })
-
 }

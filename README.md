@@ -14,8 +14,11 @@ Create tooltip
 <button id='example'>Hover to display tooltip</button>
 <script>
 	new Tooltip(document.getElementById('example'), {
-		label: "Tooltip example", // Tooltip label
-		position: "top" //position (top or bottom)
+		label: "Tooltip example", // Label *required
+		position: "top", // (top or bottom) *default: top
+		color: "green" // (color names, hex, rgb()/rgba()) *default: #444
 	})
 </script>
 ```
+## License
+MIT License
