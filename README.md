@@ -9,6 +9,10 @@ Add to HTML file
 ```html
 <script src="./path/to/tooltips-js.min.js"></script>
 ```
+Add to HTML file through CDN
+```html
+<script src="https://cdn.jsdelivr.net/npm/tooltips-js@1.0.5/src/tooltips-js.min.js"></script>
+```
 Create tooltip
 ```html
 <button id='example'>Hover to display tooltip</button>
