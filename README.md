@@ -1,6 +1,5 @@
 # TooltipsJS
 TooltipsJS is a javascript library for adding tooltips in your website. It is lightweight and easy to use.
-[![npm version](https://badge.fury.io/js/tooltips-js.svg)](https://badge.fury.io/js/tooltips-js)
 ## Add as a npm module
 ```shell
 npm install tooltips-js --save
