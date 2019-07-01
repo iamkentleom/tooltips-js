@@ -14,6 +14,8 @@ class Tooltip {
                     display: inline-block;
                 }
                 .tooltip .label-${identifier}{
+                    font-family: Arial, Helvetica, sans-serif !important;
+                    font-weight: 300;
                     cursor: pointer;
                     visibility: hidden;
                     opacity: 0;
