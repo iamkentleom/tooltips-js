@@ -11,7 +11,7 @@ Add to HTML file
 ```
 Add to HTML file through CDN
 ```html
-<script src="https://cdn.jsdelivr.net/npm/tooltips-js@1.0.6/src/tooltips-js.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/tooltips-js@1.0.7/src/tooltips-js.min.js"></script>
 ```
 Create tooltip
 ```html
