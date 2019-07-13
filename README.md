@@ -1,26 +1,26 @@
 # TooltipsJS
 TooltipsJS is a javascript library for adding tooltips in your website. It is lightweight and easy to use.
-## Add as a npm module
+## Installation
+Using npm
 ```shell
 npm install tooltips-js --save
 ```
-## Basic Usage 
-Add to HTML file
 ```html
 <script src="./path/to/tooltips-js.min.js"></script>
 ```
-Add to HTML file through CDN
+Using cdn
 ```html
 <script src="https://cdn.jsdelivr.net/npm/tooltips-js@1.0.6/src/tooltips-js.min.js"></script>
 ```
-Create tooltip
+## Basic Usage 
+Create a tooltip
 ```html
 <button id='example'>Hover to display tooltip</button>
 <script>
 	new Tooltip(document.getElementById('example'), {
 		label: "Tooltip example", // Label *required
 		position: "top", // (top or bottom) *default: top
-		color: "green" // (color names, hex, rgb(), rgba()) *default: #444
+		color: "green" // (color names, hex, rgb()) *default: #444
 	})
 </script>
 ```
